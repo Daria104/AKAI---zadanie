@@ -5,21 +5,21 @@ public class AKAI {
 
 	    private static String[] sentences = {
 	            "Taki mamy klimat",
-	            "Wszêdzie dobrze ale w domu najlepiej",
-	            "Wyskoczy³ jak Filip z konopii",
-	            "Gdzie kucharek szeœæ tam nie ma co jeœæ",
+	            "WszÄ™dzie dobrze ale w domu najlepiej",
+	            "WyskoczyÅ‚ jak Filip z konopii",
+	            "Gdzie kucharek szeÅ›Ä‡ tam nie ma co jeÅ›Ä‡",
 	            "Nie ma to jak w domu",
-	            "Konduktorze ³askawy zabierz nas do Warszawy",
-	            "Je¿eli nie zjesz obiadu to nie dostaniesz deseru",
-	            "Bez pracy nie ma ko³aczy",
-	            "Kto sieje wiatr ten zbiera burzê",
-	            "Byæ szybkim jak wiatr",
-	            "Kopaæ pod kimœ do³ki",
-	            "Gdzie raki zimuj¹",
-	            "Gdzie pieprz roœnie",
-	            "Swoj¹ drog¹ to gdzie roœnie pieprz?",
-	            "Mam nadziejê, ¿e poradzisz sobie z tym zadaniem bez problemu",
-	            "Nie powinno sprawiæ ¿adnego problemu, bo Google jest dozwolony" 
+	            "Konduktorze Å‚askawy zabierz nas do Warszawy",
+	            "JeÅ¼eli nie zjesz obiadu to nie dostaniesz deseru",
+	            "Bez pracy nie ma koÅ‚aczy",
+	            "Kto sieje wiatr ten zbiera burzÄ™",
+	            "ByÄ‡ szybkim jak wiatr",
+	            "KopaÄ‡ pod kimÅ› doÅ‚ki",
+	            "Gdzie raki zimujÄ…",
+	            "Gdzie pieprz roÅ›nie",
+	            "SwojÄ… drogÄ… to gdzie roÅ›nie pieprz?",
+	            "Mam nadziejÄ™, Å¼e poradzisz sobie z tym zadaniem bez problemu",
+	            "Nie powinno sprawiÄ‡ Å¼adnego problemu, bo Google jest dozwolony" 
 	            };
 	    
 	 
@@ -27,23 +27,23 @@ public class AKAI {
 	    		
 	    		
 	    public static void main(String[] args) {
-	        /* TODO Twoim zadaniem jest wypisanie na konsoli trzech najczêœciej wystêpuj¹cych s³ów
-	                w tablicy 'sentences' wraz z iloœci¹ ich wyst¹pieñ..
-	                Przyk³adowy wynik:
+	        /* TODO Twoim zadaniem jest wypisanie na konsoli trzech najczÄ™Å›ciej wystÄ™pujÄ…cych sÅ‚Ã³w
+	                w tablicy 'sentences' wraz z iloÅ›ciÄ… ich wystÄ…pieÅ„..
+	                PrzykÅ‚adowy wynik:
 	                1. "mam" - 12
 	                2. "tak" - 5
 	                3. "z" - 2
 	        */
 	    	
 	    	
-	    	// wstawianie jednego ca³ego napisu
+	    	// wstawianie jednego caÅ‚ego napisu
 	    	for (int i=0; i<sentences.length;i++) {
 	    		napis = napis + " " + sentences[i] ;
 	    	}
 	    	
 	    	napis = napis.toLowerCase();
 	    	
-	    	//usuwanie interpunkcji
+	    	//usuwanie interpunkcji i przygotowanie tekstu do poszukiwania wyrazÃ³w
 	    	int a = 0;
 	    	while (a<napis.length()){
 	    		char ch = napis.charAt(a);
@@ -62,6 +62,8 @@ public class AKAI {
 	    	int[] pozycje = {0,0,0,0,0,0};
 	    	int powtarzalnosc = 1;
 	    	
+		    
+		// wyszukiwanie powtarzajÄ…cych siÄ™ wyrazÃ³w
 	    	for(int i = 0; i<tab.length; i++) {
 	    		if(tab[i].equals(tab[pozycje[3]])==false && tab[i].equals(tab[pozycje[4]])==false){
 		    		for(int j=tab.length-1;j>i;j--) {
